@@ -1,15 +1,12 @@
-# Assign multiple value
-# Sequence unpackaging
-a=[1,2,3]
-x,y,z=a
-print(x,y,z)
-print(id(a))
+# create new object for immutable 
+x=y=z="orange"
 print(id(x),id(y),id(z))
-print(type(x),type(y),type(z))
+y="green"
+print(id(x),id(y),id(z))
 
+print(x,y,z)
 """
-output:1 2 3
-2169409659072
-140723929707432 140723929707464 140723929707496
-<class 'int'> <class 'int'> <class 'int'>
-"""
+output:
+2273638276560 2273638276560 2273638276560
+2273638276560 2273643917696 2273638276560
+orange green orange"""
